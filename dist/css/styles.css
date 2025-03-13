@@ -364,7 +364,7 @@ blockquote {
 #enlace-4 {
   --color-test: white;
   position: relative;
-  background-image: url(../3e9047971a064fcc2a6d.svg);
+  background-image: url(/3e9047971a064fcc2a6d.svg);
   background-repeat: no-repeat;
   background-size: cover;
   color: var(--color-test);

@@ -1,6 +1,7 @@
 const path = require('path');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+const CopyPlugin = require('copy-webpack-plugin');
 
 module.exports = {
     mode: "development",// pode ser 'mode:production'
@@ -30,8 +31,9 @@ module.exports = {
         extensions: ['.ts', '.js'],
     },
     output: {
-        filename: './javascript/bundle.js',
+        filename: 'javascript/bundle.js',
         path: path.resolve(__dirname, 'dist'),
+        publicPath: '/',
     },
     plugins: [
       new HtmlWebpackPlugin({
@@ -39,17 +41,47 @@ module.exports = {
         template: './src/index.html', // Plantilla HTML
       }),
       new HtmlWebpackPlugin({
-        filename: '/views/app.html', // Arquivo de salida
+        filename: './views/app.html', // Arquivo de salida
         template: './src/views/app.html', // Plantilla HTML
       }),
       new HtmlWebpackPlugin({
-        filename: '/views/no-user.html', // Arquivo de salida
+        filename: './views/no-user.html', // Arquivo de salida
         template: './src/views/no-user.html', // Plantilla HTML
       }),
       new HtmlWebpackPlugin({
-        filename: '/views/logueo.html', // Arquivo de salida
+        filename: './views/logueo.html', // Arquivo de salida
         template: './src/views/logueo.html', // Plantilla HTML
       }),
+      new HtmlWebpackPlugin({
+        filename: './views/axustes.html',
+        template: './src/views/axustes.html',
+      }),
+      new HtmlWebpackPlugin({
+        filename: "./views/clientes.html",
+        template: "./src/views/clientes.html",
+      }),
+      new HtmlWebpackPlugin({
+        filename: "./views/invoices.html",
+        template: "./src/views/invoices.html",
+      }),
+      new HtmlWebpackPlugin({
+        filename: "./views/graficas.html",
+        template: "./src/views/graficas.html",
+      }),
+      new HtmlWebpackPlugin({
+        filename: "./views/productos.html",
+        template: "./src/views/productos.html",
+      }),
+
+
         new MiniCssExtractPlugin({ filename: './css/styles.css' }), // Arquivo CSS final
-    ],
+        new CopyPlugin ({
+          patterns: [
+            {from:"./src/imaxenes", to: "imaxenes"}
+          ]
+        })
+    
+   
+      ],
+
 };
