@@ -72,12 +72,22 @@ module.exports = {
         filename: "./views/productos.html",
         template: "./src/views/productos.html",
       }),
+      new HtmlWebpackPlugin({
+        filename: "./views/customers.html",
+        template: "./src/views/customers.html",
+      }),
+      new HtmlWebpackPlugin({
+        filename: "./views/cesta.html",
+        template: "./src/views/cesta.html",
+      }),
 
 
         new MiniCssExtractPlugin({ filename: './css/styles.css' }), // Arquivo CSS final
         new CopyPlugin ({
           patterns: [
-            {from:"./src/imaxenes", to: "imaxenes"}
+            {from:"./src/imaxenes", to: "imaxenes"},
+            {from: "./src/chico-sentado.png", to: "chico-sentado.png"},
+            {from: "./src/fondoBueno.png", to: "fondoBueno.png"},
           ]
         })
     

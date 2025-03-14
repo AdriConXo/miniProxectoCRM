@@ -1,6 +1,6 @@
 const express = require("express");
 const path = require("path");
-const { paxinaApp, paxinaNoUser,paxinaLogueo, paxinaInvoices, paxinaCesta, paxinaCustomers, paxinaGraficas, paxinaProductos } = require("./controladores/views");
+const { paxinaApp, paxinaNoUser,paxinaLogueo, paxinaInvoices, paxinaCesta, paxinaCustomers, paxinaGraficas, paxinaProductos, paxinaAxustes } = require("./controladores/views");
 const app = express();
 
 // Paxinas
@@ -50,6 +50,9 @@ app.get("/graficas", (req,res) => {
 })
 app.get("/productos", (req,res) =>{
     paxinaProductos(req,res)
+})
+app.get("/axustes", (req,res) => {
+    paxinaAxustes(req,res)
 })
 //Un evento dende o cliente
 app.post("/envio-datos-o-servidor",(req,res)=>{
