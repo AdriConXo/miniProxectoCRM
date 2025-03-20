@@ -55,7 +55,7 @@ app.get("/axustes", (req,res) => {
     paxinaAxustes(req,res)
 })
 //Un evento dende o cliente
-app.post("/envio-datos-o-servidor",(req,res)=>{
+app.post("/envio-datos-o-servidor", (req,res)=>{
     res.send({mensaxe:"datos enviados"})
 })
 //##########
