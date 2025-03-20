@@ -7,7 +7,32 @@
     <link rel="stylesheet" href="/css/styles.css" />
 </head>
 <body>
-    dentro da aplicación
+    <header class="navbar">
+        <div class="navbar-left">
+            
+        </div>
+    
+        <div class="navbar-search">
+            <input type="text" placeholder="Buscar..." />
+        </div>
+    
+        <div class="navbar-right">
+            <img src="./imaxenes\iconos\Notifications.png" alt="Notificaciones" />
+            <img src="./imaxenes/iconos/Profile.png" alt="Usuario" />
+        </div>
+    </header>
+
+ <aside class="sidebar">
+    <div class="logo">
+        <a href="#"><img src="./imaxenes/iconos/Oval.png" alt="Menú"></a>
+    </div>
+    <nav>
+        <a href="#"><img src="./imaxenes/iconos/Home.png"alt=Home></a>
+        <a href="#"><img src="./imaxenes/iconos/Persoas.png" alt="Clientes"></a> 
+        <a href="#"><img src="./imaxenes/iconos/Rectangle.png" alt="Facturas"></a>
+        <a href="#"><img src="./imaxenes/iconos/Shape.png" alt="Configuracion"></a>   
+    </nav>
+ </aside>
     <div class="imaxenes-flex">
         <div>
             <a href="/invoices"><img src="/imaxenes/invoices.png"/></a>
@@ -31,8 +56,7 @@
         </div>
     </div>
     
-    <button id="solicitudeGET">Solicitude GET</button>
-    <button id="solicitudePOST">Solicitude POST</button>
+    
     <script type="module" src="../javascript/bundle.js"></script>
 </body>
 </html>
