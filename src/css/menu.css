@@ -6,10 +6,10 @@
   text-transform: uppercase;
   font-weight: 700;
 }
-/* === Barra Lateral (Sidebar) === */
+
 .sidebar {
-  width: 5vw; /* 5% del ancho total */
-  height: 100vh; /* Toda la altura de la pantalla */
+  width: 5vw; 
+  height: 100vh; 
  background-color: rgb(32, 133,241);
   display: flex;
   flex-direction: column;
@@ -20,7 +20,7 @@
   left: 0;
 }
 
-/* === Contenedor de Iconos === */
+
 .sidebar nav {
   display: flex;
   flex-direction: column;
@@ -29,7 +29,6 @@
   margin-top: 50px;
 }
 
-/* === Iconos del Sidebar === */
 .sidebar nav a {
   display: flex;
   flex-direction: column;
@@ -42,13 +41,13 @@
   transition: transform 0.2s ease-in-out;
 }
 
-/* === Efecto Hover === */
+
 .sidebar nav a:hover img {
   transform: scale(1.2);
 }
-/* === Círculo en la parte superior === */
+
 .logo {
-  width: 100%; /* Ajusta el tamaño del círculo */
+  width: 100%; 
   height: 80px;
   display: flex;
   justify-content: center;
@@ -56,9 +55,9 @@
  
 }
 
-/* Imagen dentro del círculo */
+
 .logo img {
-  width: 40px; /* Tamaño de la imagen */
+  width: 40px; 
   height: 40px;
   transition: transform 0.2s ease-in-out;
 }
@@ -67,7 +66,7 @@
 }
 
 
-/* === Navbar (Barra de arriba) === */
+
 .navbar {
   width: 95vw;
   height: 70px;
@@ -84,13 +83,11 @@
 }
 
 
-
-/* === Barra de búsqueda === */
 .navbar-search {
-  flex: 1; /* Ocupa el espacio disponible */
+  flex: 1; 
   display: flex;
   align-items: center;
-  margin-left: 20px; /* Ajustar para pegarlo al sidebar */
+  margin-left: 20px;
 }
 
 .navbar-search input {
@@ -100,26 +97,71 @@
   border: 1px solid #ccc;
 }
 
-/* === Contenedor de los iconos a la derecha === */
+
 .navbar-right {
   display: flex;
   align-items: center;
   justify-content: flex-end;
-  gap: 15px; /* Espacio entre iconos */
-  margin-right: 50px; /* Acercamos los iconos hacia la izquierda */
+  gap: 15px; 
+  margin-right: 50px; 
 }
 
-/* === Imagen del perfil (círculo) === */
+
 .navbar-right .profile-pic {
   width: 40px;
   height: 40px;
   border-radius: 50%;
   cursor: pointer;
   transition: transform 0.2s ease-in-out;
-  margin-left: -20px; /* Mover un poco a la izquierda */
+  margin-left: -20px; 
 }
 
-/* === Notificación (campanita) === */
+
 .navbar-right img[alt="Notificacion"] {
-  margin-left: -30px; /* Mover un poco a la izquierda */
+  margin-left: -30px; 
 }
+.imaxenes-flex {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* 3 columnas */
+  gap: 20px; /* Espaciado entre elementos */
+  justify-content: center;
+  align-items: start;
+  padding: 20px;
+  margin-top: 80px;
+}
+.imaxenes-flex div {
+  background-color: white;
+  border-radius: 10px;
+  padding: 15px;
+  width: 250px; /* Ajusta según el tamaño que quieras */
+  height: 250px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s ease-in-out;
+}
+.imaxenes-flex div:hover {
+  transform: translateY(-5px); 
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2); 
+}
+.contenido-principal {
+  margin-left: 5vw;  /* Para dejar espacio al sidebar */
+  padding: 20px;      /* Para darle espacio interno */
+}
+
+.contenido-principal {
+  margin-left: 5vw;  /* Para dejar espacio al sidebar */
+  padding: 20px;      /* Para darle espacio interno */
+}
+
+.titulo-home {
+  font-size: 24px;
+  font-weight: bold;
+  color: #333;
+  margin-top: 80px;  /* Baja el título para que no quede pegado */
+  margin-left: 20px; /* Ajusta la posición horizontalmente */
+}
+
